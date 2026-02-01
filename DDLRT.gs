@@ -72,7 +72,7 @@ function updateJSONOnGitHub() {
   Logger.log("Generated JSON: " + jsonData);
 
   
-  const GITHUB_USERNAME = "ungaul";
+  const GITHUB_USERNAME = "kxvnlpl";
   const GITHUB_REPO = "domainedelarochethulon.fr";
   const GITHUB_FILE_PATH = "assets/js/data.json";
   const GITHUB_TOKEN = PropertiesService.getScriptProperties().getProperty('GITHUB_TOKEN');

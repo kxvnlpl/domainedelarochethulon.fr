@@ -10,8 +10,12 @@ $(document).ready(function () {
                 <div>
                     <h2>${key} ${data.vintage}</h2>
                     <p>${data.description}</p>
-                    <p><strong>Prix: </strong>
-                        <span class="prix">${data.price.toFixed(2)}</span>€ TTC
+                    <p><strong>Prix: </strong>  
+                        <span class="prix">${data.price.toFixed(2)}</span>€ TTC  
+                    </p>  
+                    <p style="font-size: 15px">  
+                        Conditionné en carton de 6 bouteilles.<br>
+                        Prix franco à partir de 36 bouteilles.
                     </p>
                     <p><strong class="temp">Température de service:</strong> ${data.servingTemp}</p>
                 </div>
@@ -120,7 +124,7 @@ $(document).ready(function () {
                         setURL('vins', vinKey);
                         $('.content-section').hide();
                         $('#vins').show();
-                        $('.vin-item').hide(); 
+                        $('.vin-item').hide();
                         $(`.vin-item[data-vin="${vinKey}"]`).show();
                     });
                 }
@@ -184,7 +188,7 @@ $(document).ready(function () {
         const lastUpdateElement = $('#lastUpdate');
         lastUpdateElement.text('Calcul...');
 
-        const repoUrl = 'https://api.github.com/repos/ungaul/domainedelarochethulon.fr';
+        const repoUrl = 'https://api.github.com/repos/kxvnlpl/domainedelarochethulon.fr';
         fetch(repoUrl)
             .then(response => {
                 if (!response.ok) {

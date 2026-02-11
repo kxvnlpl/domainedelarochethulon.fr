@@ -3,26 +3,6 @@ $(document).ready(function () {
         return key.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9 ]/g, "").trim();
     }
 
-    function createVinElement(key, data) {
-        return `
-            <div class="vin-item" data-vin="${key}">
-                <img src="/assets/images/bouteilles/Bouteille ${key}.jpg" alt="${data.vintage} ${key}">
-                <div>
-                    <h2>${key} ${data.vintage}</h2>
-                    <p>${data.description}</p>
-                    <p><strong>Prix: </strong>  
-                        <span class="prix">${data.price.toFixed(2)}</span>€ TTC  
-                    </p>  
-                    <p style="font-size: 15px">  
-                        Conditionné en carton de 6 bouteilles.<br>
-                        Prix franco à partir de 36 bouteilles.
-                    </p>
-                    <p><strong class="temp">Température de service:</strong> ${data.servingTemp}</p>
-                </div>
-            </div>
-        `;
-    }
-
     function createMedalElement(medal) {
         return `
             <div class="medal-item">
@@ -113,6 +93,10 @@ $(document).ready(function () {
                                     <h2>${vinKey} ${vinDetails.vintage}</h2>
                                     <p>${vinDetails.description}</p>
                                     <p><strong>Prix: </strong><span class="prix">${vinDetails.price.toFixed(2)}</span>€ TTC</p>
+                                    <p style="font-size: 15px">  
+                                        Conditionné en carton de 6 bouteilles.<br>
+                                        Prix franco à partir de 36 bouteilles.
+                                    </p>
                                     <p><strong class="temp">Température de service:</strong> ${vinDetails.servingTemp}</p>
                                 </div>
                             </div>

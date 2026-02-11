@@ -93,7 +93,7 @@ $(document).ready(function () {
                                     <h2>${vinKey} ${vinDetails.vintage}</h2>
                                     <p>${vinDetails.description}</p>
                                     <p><strong>Prix: </strong><span class="prix">${vinDetails.price.toFixed(2)}</span>€ TTC</p>
-                                    <p style="font-size: 15px">  
+                                    <p style="font-size: 11px">  
                                         Conditionné en carton de 6 bouteilles.<br>
                                         Prix franco à partir de 36 bouteilles.
                                     </p>
